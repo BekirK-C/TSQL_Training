@@ -1,0 +1,18 @@
+CREATE VIEW VW_PRODUCTS
+AS
+SELECT P.ProductName AS [ÜRÜN ADI],C.CategoryName AS [KATEGORÝ ADI], S.CompanyName [ÞÝRKET ADI]FROM Products AS P
+JOIN Categories AS C ON C.CategoryID = P.CategoryID
+JOIN Suppliers  AS S ON S.SupplierID = P.SupplierID
+
+
+
+SELECT * FROM VWPRODUCTS WHERE [ÜRÜN ADI] = 'Chai'
+
+--VIEW, ÝÇERÝÐÝ SORGU ÝLE BELÝRLENEN SANAL BÝR TABLODUR.
+--VERÝ TABANINDA FAZLADAN YER KAPLAMAZ.
+--GENELDE BÝRDEN FAZLA TABLO ÜZERÝNDE YAPILAN KARMAÞIK SORGULAR ÝÇÝN KULLANILIR.
+
+
+
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS --WHERE COLUMN_NAME='SupplierID'
+--Bu sorgu ile tablo kolonlarý hakkýndaki tüm bilgileri elde ebeliriz.
